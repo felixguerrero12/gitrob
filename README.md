@@ -36,7 +36,7 @@ Gitrob is a tool to help find potentially sensitive information pushed to reposi
 -no-expand-orgs
     Don't add members to targets when processing organizations
 -port int
-    Port to run web server on (default 9393)
+    Port to run web server on (default 8080)
 -save string
     Save session to a file at the given path
 -silent
@@ -96,9 +96,9 @@ The [included Dockerfile](./Dockerfile) can be used to build images needed to ru
 
 You can then run the container, optionally specifying how many logical CPUs to allocate for concurrency with:
 
-    docker run -p 9393:9393 --cpus <NUM_CPUS> gitrob:latest -bind-address 0.0.0.0 -github-access-token <token> -in-mem-clone -mode 2 <target1> <target2> ...
+    docker run -p 8080:8080 --cpus <NUM_CPUS> gitrob:latest -bind-address 0.0.0.0 -github-access-token <token> -in-mem-clone -mode 2 <target1> <target2> ...
 
-With this container running, use your browser to hit the UI with:  http://localhost:9393.
+With this container running, use your browser to hit the UI with:  http://localhost:8080.
 
 ## Access Tokens
 

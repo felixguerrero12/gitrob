@@ -32,7 +32,7 @@ func ParseOptions() (Options, error) {
 		Load:              flag.String("load", "", "Load session file"),
 		Mode:              flag.Int("mode", 1, "Secrets matching mode (see documentation)."),
 		NoExpandOrgs:      flag.Bool("no-expand-orgs", false, "Don't add members to targets when processing organizations"),
-		Port:              flag.Int("port", 8080, "Port to run web server on"),
+		Port:              flag.Int("port", 9393, "Port to run web server on"),
 		Save:              flag.String("save", "", "Save session to file"),
 		Silent:            flag.Bool("silent", false, "Suppress all output except for errors"),
 		Threads:           flag.Int("threads", 0, "Number of concurrent threads (default number of logical CPUs)"),
